@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "**지킬에 오신것을 환영합니다!**"
+title:  "**Choi sung hyun**"
 date:   2015-05-20 01:23:36
 categories: jekyll update
 ---
