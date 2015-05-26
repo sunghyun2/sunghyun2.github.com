@@ -6,4 +6,4 @@ permalink: /Food/
 
 음식 카테고리
 
- ![이미지] (http://dthumb.phinf.naver.net/?src=http://dbscthumb.phinf.naver.net/2756_000_1/20131107191723949_PH4IJTEQW.jpg/41_i1.jpg?type=w690_fst_n&wm=Y&twidth=500&theight=500&opts=17")
+ ![이미지] (http://dbscthumb.phinf.naver.net/2765_000_1/20131013121259909_DQBC9WI9N.jpg/28585.jpg?type=m250&wm=N)
