@@ -1,8 +1,8 @@
 # Site settings
-title: 오늘의 당신을 책임져 드립니다.
+title: Title
 email: Email@email.com
 description: > # this means to ignore newlines until "baseurl:"
-  오른쪽 아래 창
+1234
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: ?
@@ -10,3 +10,6 @@ github_username:  ??
 
 # Build settings
 markdown: kramdown
+highlighter: pygments
+permalink: pretty
+relative_permalinks: false
