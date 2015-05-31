@@ -1,20 +1,129 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-  {% include head.html %}
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>{{ page.title }}</title>
+  <meta name="author" content="David B Anderson" />
+  <link rel='alternate' type='application/atom+xml' title='full articles' href='http://feeds2.feedburner.com/alpinegizmo' />
+  <link rel='alternate' type='application/rss+xml' title='comments' href='http://alpinegizmo.disqus.com/comments.rss' />
 
-  <body>
+  <!-- syntax highlighting CSS -->
+  <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
 
-    {% include header.html %}
+  <!-- homepage CSS, imports others -->
+  <link rel="stylesheet" href="/css/site.css" type="text/css" media="screen, projection" />
+</head>
 
-    <div class="page-content">
-      <div class="wrapper">
+<body>
+  <div id="site">
+    <div id="page">
+
+      <div id="sidebar">
+        <img src="/images/david-emparis.jpg" />
+        <div id="header">
+          <a href="/"><h1>alpinegizmo</h1></a>
+        </div>
+
+        <h3>David Anderson</h3>
+        <ul>
+          <li>folklogic is available for hire!</li>
+          <li><p class='indented'>french mobile: +33 6 331 80 266</p></li>
+          <li><p class='indented'>US: +1 617 401 8246</p></li>
+          <li><p class='indented'>skype: alpinegizmo</p></li>
+          <li><p class='indented'>email: david &lt;at&gt; alpinegizmo.com</p></li>
+          <li>
+            <a href="http://folklogic.com" title="folklogic">co-founder of folklogic</a>
+             (<a href="http://folklogic.com/david.html">my CV</a>)
+          </li>
+          <li>
+            <a href="http://del.icio.us/gizmo">del.icio.us</a>, 
+            <a href="http://www.flickr.com/photos/alpinegizmo" title="flickr">flickr</a>,
+            <a href="http://github.com/alpinegizmo">github</a>
+          </li>
+        </ul>
+
+        <h3 class='sidebar-title'>Blog Posts</h3>
+        <ul>
+          <li>
+            <table>
+              {% for post in site.posts %}
+              <tr valign='top'>
+                <td nowrap><span class='date'>{{ post.date | date_to_string }}</span></td>
+                <td> &raquo; </td>
+                <td><a href="{{ post.url }}">{{ post.title }}</a></td>
+              </tr>
+              {% endfor %}
+            </table>
+          </li>
+        </ul>
+        
+        <!-->
+        <h3 class='sidebar-title'>Recent Comments</h3>
+        <ul>
+          <li>
+            <div id="dsq-recentcomments" class="dsq-widget">
+              <script type="text/javascript" src="http://disqus.com/forums/alpinegizmo/recent_comments_widget.js?num_items=5&avatar_size=32"></script>
+            </div>          
+          </li>
+        </ul>
+        <-->
+
+        <h3 class='sidebar-title'>Links</h3>
+        <ul>
+          <li><a href="http://nonlynnear.com" title="nonlynnear">nonlynnear</a></li>
+          <li><a href="http://mofembot.com" title="mofembot">mofembot rides again</a></li>
+          <li><a href="http://larry.baltz.org/blog" title="LarryOnLine">LarryOnLine</a></li>
+        </ul>
+
+        <h3 class='sidebar-title'>Feeds</h3>
+        <ul>
+          <li><a href="http://feeds2.feedburner.com/alpinegizmo?format=xml" title="article feed">articles</a></li>
+          <li><a href="http://alpinegizmo.disqus.com/comments.rss" title="comment feed">comments</a></li>
+          <li><a href="http://api.flickr.com/services/feeds/photos_public.gne?id=19228922@N00&lang=en-us&format=rss_200" title="flickr feed">flickr</a></li>
+          <li><a href="http://feeds.delicious.com/v2/rss/gizmo?count=15" title="delicious feed">del.icio.us</a></li>
+          <li><a href="http://github.com/alpinegizmo.atom" title="github feed">github</a></li>
+          <li><a href="http://twitter.com/statuses/user_timeline/2191041.rss" title="twitter feed">twitter</a></li>
+        </ul>
+      </div><!-- end of sidebar -->
+
+      <div id="content">
         {{ content }}
       </div>
-    </div>
 
-    {% include footer.html %}
+      <div id='footer'>
+        article content copyright 2008, 2009 David B Anderson<br />
+        <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+      </div>
 
-  </body>
+    </div><!-- end of page -->
+  </div><!-- end of site -->
 
+  <script type="text/javascript">
+  //<![CDATA[
+  (function() {
+      var links = document.getElementsByTagName('a');
+      var query = '?';
+      for(var i = 0; i < links.length; i++) {
+        if(links[i].href.indexOf('#disqus_thread') >= 0) {
+          query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+        }
+      }
+      document.write('<script type="text/javascript" src="http://disqus.com/forums/alpinegizmo/get_num_replies.js' + query + '"></' + 'script>');
+    })();
+  //]]>
+  </script>
+
+  <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    try {
+      var pageTracker = _gat._getTracker("UA-6964420-1");
+      pageTracker._trackPageview();
+    } catch(err) {}
+  </script>
+</body>
 </html>
